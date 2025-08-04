@@ -1,0 +1,68 @@
+/* css/style.css */
+
+/* Variables de color */
+:root {
+  --primary-color: #ff6600;
+  --primary-hover: #e65500;
+}
+
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor a pantalla completa con fondo */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Aquí puedes definir tu fondo: */
+  background: url('../Image/Index.png') center/cover no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper centrado */
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+  max-width: 300px;
+  width: 80%;
+  height: auto;
+}
+
+/* Grupo de botones */
+.buttons {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+/* Estilo base de botón */
+.buttons button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Efecto hover */
+.buttons button:hover {
+  background-color: var(--primary-hover);
+}

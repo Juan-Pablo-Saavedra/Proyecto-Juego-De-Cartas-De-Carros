@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Batalla 1 vs 1</title>
+  <link rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Batalla 1 vs 1</h1>
+
+    <div class="players">
+      <div class="player-card" id="player1">
+        <h2 id="name1">Jugador 1</h2>
+        <ul class="stats">
+          <li>Fuerza: <span id="strength1">–</span></li>
+          <li>Velocidad: <span id="speed1">–</span></li>
+          <li>Inteligencia: <span id="intel1">–</span></li>
+        </ul>
+      </div>
+      <div class="player-card" id="player2">
+        <h2 id="name2">Jugador 2</h2>
+        <ul class="stats">
+          <li>Fuerza: <span id="strength2">–</span></li>
+          <li>Velocidad: <span id="speed2">–</span></li>
+          <li>Inteligencia: <span id="intel2">–</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="attr-btn btn-orange" data-attr="strength">Fuerza</button>
+      <button class="attr-btn btn-orange" data-attr="speed">Velocidad</button>
+      <button class="attr-btn btn-orange" data-attr="intelligence">Inteligencia</button>
+    </div>
+
+    <div id="result"></div>
+
+    <button id="btnNewGame" class="btn-orange">Nueva Partida</button>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Variables */
+:root {
+  --primary: #ff6600;
+  --primary-hover: #e65500;
+  --bg: url('../Image/Index.png') center/cover no-repeat;
+}
+
+/* Pantalla completa */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.select-container {
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.select-container h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.option-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  color: var(--primary);
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-btn.selected {
+  background: var(--primary);
+  color: #fff;
+}
+
+#btnContinue {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+#btnContinue:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Asegura posicionamiento relativo para el botón absoluto */
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo común de botones naranjas */
+.btn-orange {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e68900;
+}
+
+/* Ubica Regresar arriba-izquierda */
+#btnBack {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+}
+
+/* Imagen principal centrada */
+.main-image {
+  display: block;
+  margin: 80px auto 24px; /* deja espacio para el botón */
+  max-width: 90%;
+  height: auto;
+}
+
+/* Contenedor de selección centrado */
+.select-container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estado deshabilitado de Continuar */
+#btnContinue:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

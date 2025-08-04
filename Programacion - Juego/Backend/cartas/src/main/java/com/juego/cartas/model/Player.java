@@ -1,27 +1,24 @@
 package com.juego.cartas.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "player")
 public class Player {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_player")
     private int id_player;
 
-    @Column(name = "name", length = 30)
+    @Column(name = "name", length = 50, nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private int score;
+    public Player() {}
 
-    public Player(int id_player, String name, int score) {
+    public Player(int id_player, String name) {
         this.id_player = id_player;
         this.name = name;
-        this.score = score;
     }
 
     public int getId_player() {
@@ -38,13 +35,5 @@ public class Player {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
     }
 }

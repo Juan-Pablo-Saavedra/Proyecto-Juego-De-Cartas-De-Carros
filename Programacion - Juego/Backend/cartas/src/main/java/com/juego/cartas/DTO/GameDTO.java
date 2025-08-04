@@ -1,60 +1,50 @@
-package com.juego.cartas.model;
+package com.juego.cartas.DTO;
 
-import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "game")
-public class Game {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_game")
-    private int id_game;
-
-    @Column(name = "number_of_players", nullable = false)
+public class GameDTO {
+    @JsonProperty("id")
+    private int gameId;
     private int numberOfPlayers;
-
-    @Column(name = "start_time", nullable = false)
     private LocalDateTime startTime;
-
-    @Column(name = "end_time")
     private LocalDateTime endTime;
-
-    @Column(nullable = false, length = 20)
-    private String status;           // e.g. "CREADO", "EN_PROGRESO", "FINISHED"
-
-    @Column(name = "winner_player_id")
+    private String status;
     private Integer winnerPlayerId;
+    private List<PlayerDTO> players;
+    private List<RoundDTO> rounds;
 
-    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
-    private List<GamePlayer> players = new ArrayList<>();
+    public GameDTO() {}
 
-    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
-    private List<Round> rounds = new ArrayList<>();
-
-    public Game() {}
-
-    public Game(int id_game, int numberOfPlayers, LocalDateTime startTime) {
-        this.id_game = id_game;
+    public GameDTO(int gameId,
+                   int numberOfPlayers,
+                   LocalDateTime startTime,
+                   LocalDateTime endTime,
+                   String status,
+                   Integer winnerPlayerId,
+                   List<PlayerDTO> players,
+                   List<RoundDTO> rounds) {
+        this.gameId = gameId;
         this.numberOfPlayers = numberOfPlayers;
         this.startTime = startTime;
+        this.endTime = endTime;
+        this.status = status;
+        this.winnerPlayerId = winnerPlayerId;
+        this.players = players;
+        this.rounds = rounds;
     }
 
-    public int getId_game() {
-        return id_game;
+    public int getGameId() {
+        return gameId;
     }
-
-    public void setId_game(int id_game) {
-        this.id_game = id_game;
+    public void setGameId(int gameId) {
+        this.gameId = gameId;
     }
 
     public int getNumberOfPlayers() {
         return numberOfPlayers;
     }
-
     public void setNumberOfPlayers(int numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
     }
@@ -62,7 +52,6 @@ public class Game {
     public LocalDateTime getStartTime() {
         return startTime;
     }
-
     public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
@@ -70,7 +59,6 @@ public class Game {
     public LocalDateTime getEndTime() {
         return endTime;
     }
-
     public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
@@ -78,7 +66,6 @@ public class Game {
     public String getStatus() {
         return status;
     }
-
     public void setStatus(String status) {
         this.status = status;
     }
@@ -86,24 +73,21 @@ public class Game {
     public Integer getWinnerPlayerId() {
         return winnerPlayerId;
     }
-
     public void setWinnerPlayerId(Integer winnerPlayerId) {
         this.winnerPlayerId = winnerPlayerId;
     }
 
-    public List<GamePlayer> getPlayers() {
+    public List<PlayerDTO> getPlayers() {
         return players;
     }
-
-    public void setPlayers(List<GamePlayer> players) {
+    public void setPlayers(List<PlayerDTO> players) {
         this.players = players;
     }
 
-    public List<Round> getRounds() {
+    public List<RoundDTO> getRounds() {
         return rounds;
     }
-
-    public void setRounds(List<Round> rounds) {
+    public void setRounds(List<RoundDTO> rounds) {
         this.rounds = rounds;
     }
 }

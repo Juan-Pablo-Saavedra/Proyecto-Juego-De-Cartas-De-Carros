@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+
+.player-card {
+  background: #fafafa;
+  padding: 16px;
+  border-radius: 6px;
+  width: 45%;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.player-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  text-align: left;
+}
+
+.stats li {
+  margin: 6px 0;
+}
+
+.actions {
+  margin-bottom: 16px;
+}
+
+.attr-btn {
+  margin: 0 8px;
+}
+
+#result {
+  font-size: 18px;
+  margin: 16px 0;
+  min-height: 24px;
+}
+
+/* Botones naranjas (mismo estilo) */
+.btn-orange {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e68900;
+}
