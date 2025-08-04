@@ -1,5 +1,5 @@
 // Conexion a la API
-const apiBase   = 'http://localhost:8080/api/games';
+const apiBase   = 'http://localhost:8085/api/games';
 const btnBack   = document.getElementById('btnBack');
 const btnCont   = document.getElementById('btnContinue');
 const options   = document.querySelector('.options');
@@ -63,7 +63,7 @@ btnCont.addEventListener('click', async () => {
     gameData = json;
   } catch (err) {
     // Fallback demo
-    alert('No se pudo conectar con la API. Modo demo activado.');
+    alert(' Modo demo activado.');
     gameData = {
       gameId: 'demo_' + Date.now(),
       players: names.map(n => ({
