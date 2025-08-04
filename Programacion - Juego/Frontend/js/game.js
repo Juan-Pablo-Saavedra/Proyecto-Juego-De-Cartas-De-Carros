@@ -1,5 +1,5 @@
 // Base URL de la API (puerto 8085)
-const apiBase     = 'http://localhost:8085/api/games';
+const apiBase     = 'http://localhost:8080/api/games';
 const raw         = localStorage.getItem('currentGameData');
 let gameData      = raw ? JSON.parse(raw) : null;
 
@@ -77,3 +77,26 @@ btnNewGame.addEventListener('click', () => {
 
 // Iniciar todo
 window.addEventListener('DOMContentLoaded', loadGame);
+
+// Funcionalidad para mostrar ranking
+async function loadRanking() {
+  const rankingDiv = document.getElementById('ranking');
+  if (!rankingDiv) return;
+
+  try {
+    const res = await fetch(`${apiBase}/ranking`);
+    if (!res.ok) throw new Error('Error al obtener el ranking');
+    const ranking = await res.json();
+    if (!Array.isArray(ranking)) throw new Error('Ranking inválido');
+
+    rankingDiv.innerHTML = '<h3>Ranking</h3><ol>' +
+      ranking.map(player => `<li>${player.name}: ${player.wins} victorias</li>`).join('') +
+      '</ol>';
+  } catch (error) {
+    rankingDiv.innerHTML = `<p>No se pudo cargar el ranking. ${error.message}</p>`;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', loadRanking);
+
+

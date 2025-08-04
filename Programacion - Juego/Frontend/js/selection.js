@@ -1,5 +1,5 @@
 // Conexion a la API
-const apiBase   = 'http://localhost:8085/api/games';
+const apiBase   = 'http://localhost:8080/api/games';
 const btnBack   = document.getElementById('btnBack');
 const btnCont   = document.getElementById('btnContinue');
 const options   = document.querySelector('.options');
@@ -81,3 +81,5 @@ btnCont.addEventListener('click', async () => {
   localStorage.setItem('currentGameData', JSON.stringify(gameData));
   window.location.href = 'game.html';
 });
+
+

@@ -74,3 +74,57 @@ body {
 .btn-orange:hover {
   background-color: #e68900;
 }
+
+/* Estilos para el ranking */
+.ranking-container {
+  margin: 32px auto 0 auto;
+  max-width: 400px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+}
+
+.ranking-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #ff9800;
+  letter-spacing: 1px;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ranking-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 16px;
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.ranking-position {
+  font-weight: bold;
+  color: #ff9800;
+  margin-right: 12px;
+}
+
+.ranking-name {
+  flex: 1;
+  text-align: left;
+}
+
+.ranking-score {
+  font-weight: bold;
+  color: #333;
+}
+

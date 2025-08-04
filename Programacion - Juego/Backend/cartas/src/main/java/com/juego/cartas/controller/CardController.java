@@ -33,7 +33,7 @@ public class CardController {
             .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<ResponseDTO> create(@RequestBody CardDTO dto) {
         ResponseDTO resp = service.save(dto);
         return ResponseEntity.ok(resp);
