@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background: url('../Image/Fondo-Juego.jpg') center/cover no-repeat;
   text-align: center;
 }
 

@@ -1,12 +1,14 @@
-// Base URL de la API (puerto 8085)
+// Conexion a la API
 const apiBase   = 'http://localhost:8085/api/games';
 const btnBack   = document.getElementById('btnBack');
 const btnCont   = document.getElementById('btnContinue');
 const options   = document.querySelector('.options');
 const infoMsg   = document.getElementById('infoMsg');
 
-// Siempre habilitamos Regresar
-btnBack.addEventListener('click', () => window.history.back());
+// boton pa regresar
+btnBack.addEventListener('click', () => {
+  window.location.href = 'index.html'; // Cambia 'index.html' por la ventana que desees
+});
 
 // Generar botones del modo ilustrativo (2–7 jugadores)
 let selectedCount = null;
