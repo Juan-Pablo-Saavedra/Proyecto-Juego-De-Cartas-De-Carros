@@ -1,4 +1,3 @@
-// Base URL de la API (puerto 8085)
 const apiBase     = 'http://localhost:8080/api/games';
 const raw         = localStorage.getItem('currentGameData');
 let gameData      = raw ? JSON.parse(raw) : null;

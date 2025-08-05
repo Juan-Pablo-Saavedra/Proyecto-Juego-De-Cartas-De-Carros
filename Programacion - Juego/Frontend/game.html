@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>Batalla 1 vs 1</title>
   <link rel="stylesheet" href="css/game.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
   <div class="game-container">
@@ -13,25 +15,25 @@
       <div class="player-card" id="player1">
         <h2 id="name1">Jugador 1</h2>
         <ul class="stats">
-          <li>Fuerza: <span id="strength1">–</span></li>
-          <li>Velocidad: <span id="speed1">–</span></li>
-          <li>Inteligencia: <span id="intel1">–</span></li>
+          <li>Velocidad Máxima: <span id="strength1">–</span></li>
+          <li>Aceleracion: <span id="speed1">–</span></li>
+          <li>Potencia: <span id="intel1">–</span></li>
         </ul>
       </div>
       <div class="player-card" id="player2">
         <h2 id="name2">Jugador 2</h2>
         <ul class="stats">
-          <li>Fuerza: <span id="strength2">–</span></li>
-          <li>Velocidad: <span id="speed2">–</span></li>
-          <li>Inteligencia: <span id="intel2">–</span></li>
+          <li>Velocidad Máxima: <span id="strength2">–</span></li>
+          <li>Aceleracion: <span id="speed2">–</span></li>
+          <li>Potencia:: <span id="intel2">–</span></li>
         </ul>
       </div>
     </div>
 
     <div class="actions">
-      <button class="attr-btn btn-orange" data-attr="strength">Fuerza</button>
-      <button class="attr-btn btn-orange" data-attr="speed">Velocidad</button>
-      <button class="attr-btn btn-orange" data-attr="intelligence">Inteligencia</button>
+      <button class="attr-btn btn-orange" data-attr="strength">Velocidad Máxima</button>
+      <button class="attr-btn btn-orange" data-attr="speed">Aceleracion</button>
+      <button class="attr-btn btn-orange" data-attr="intelligence">Potencia</button>
     </div>
 
     <div id="result"></div>
@@ -65,5 +67,11 @@
 
 
   <script src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+    crossorigin="anonymous"></script>
 </body>
 </html>

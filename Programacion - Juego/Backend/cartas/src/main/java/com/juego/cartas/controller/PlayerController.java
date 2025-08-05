@@ -39,17 +39,5 @@ public class PlayerController {
         return ResponseEntity.ok(resp);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<ResponseDTO> update(
-            @PathVariable int id,
-            @RequestBody PlayerDTO dto) {
-        ResponseDTO resp = service.updatePlayer(id, dto);
-        return ResponseEntity.ok(resp);
-    }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<ResponseDTO> delete(@PathVariable int id) {
-        ResponseDTO resp = service.deletePlayer(id);
-        return ResponseEntity.ok(resp);
-    }
 }

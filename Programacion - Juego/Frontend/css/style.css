@@ -39,10 +39,12 @@ body {
 .logo {
   display: block;
   margin: 0 auto 2rem;
-  max-width: 300px;
+  max-width: 550px;
   width: 80%;
   height: auto;
+  
 }
+
 
 /* Grupo de botones */
 .buttons {
@@ -59,7 +61,7 @@ body {
   border: none;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 /* Efecto hover */
